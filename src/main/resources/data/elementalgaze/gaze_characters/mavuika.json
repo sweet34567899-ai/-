@@ -1,0 +1,28 @@
+{
+ "element": "pyro",
+ "rarity": 5,
+ "archon": true,
+ "in_roll_pool": false,
+ "normal": {
+  "type": "melee",
+  "multiplier": 1.4,
+  "range": 4,
+  "interval": 8
+ },
+ "skill": {
+  "type": "dash",
+  "multiplier": 2.6,
+  "range": 8,
+  "radius": 3,
+  "cooldown": 140,
+  "energy_gain": 8
+ },
+ "burst": {
+  "type": "aoe",
+  "multiplier": 8.0,
+  "range": 0,
+  "radius": 9,
+  "cooldown": 700,
+  "energy_cost": 90
+ }
+}

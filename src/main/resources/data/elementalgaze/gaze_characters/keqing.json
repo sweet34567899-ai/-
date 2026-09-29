@@ -1,0 +1,28 @@
+{
+ "element": "electro",
+ "rarity": 5,
+ "archon": false,
+ "in_roll_pool": true,
+ "normal": {
+  "type": "melee",
+  "multiplier": 1.1,
+  "range": 4,
+  "interval": 8
+ },
+ "skill": {
+  "type": "dash",
+  "multiplier": 2.4,
+  "range": 7,
+  "radius": 3,
+  "cooldown": 140,
+  "energy_gain": 8
+ },
+ "burst": {
+  "type": "aoe",
+  "multiplier": 6.5,
+  "range": 0,
+  "radius": 7,
+  "cooldown": 600,
+  "energy_cost": 80
+ }
+}

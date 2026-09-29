@@ -1,0 +1,28 @@
+{
+ "element": "dendro",
+ "rarity": 5,
+ "archon": true,
+ "in_roll_pool": false,
+ "normal": {
+  "type": "ranged",
+  "multiplier": 1.2,
+  "range": 18,
+  "interval": 10
+ },
+ "skill": {
+  "type": "aoe",
+  "multiplier": 2.6,
+  "range": 12,
+  "radius": 6,
+  "cooldown": 170,
+  "energy_gain": 8
+ },
+ "burst": {
+  "type": "aoe",
+  "multiplier": 8.0,
+  "range": 0,
+  "radius": 10,
+  "cooldown": 700,
+  "energy_cost": 90
+ }
+}

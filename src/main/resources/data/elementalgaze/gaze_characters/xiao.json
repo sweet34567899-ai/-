@@ -1,0 +1,28 @@
+{
+ "element": "anemo",
+ "rarity": 5,
+ "archon": false,
+ "in_roll_pool": true,
+ "normal": {
+  "type": "melee",
+  "multiplier": 1.2,
+  "range": 4,
+  "interval": 8
+ },
+ "skill": {
+  "type": "dash",
+  "multiplier": 2.4,
+  "range": 8,
+  "radius": 3,
+  "cooldown": 120,
+  "energy_gain": 8
+ },
+ "burst": {
+  "type": "aoe",
+  "multiplier": 6.0,
+  "range": 0,
+  "radius": 7,
+  "cooldown": 600,
+  "energy_cost": 80
+ }
+}

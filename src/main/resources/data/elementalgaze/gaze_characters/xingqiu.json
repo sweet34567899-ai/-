@@ -1,0 +1,28 @@
+{
+ "element": "hydro",
+ "rarity": 4,
+ "archon": false,
+ "in_roll_pool": true,
+ "normal": {
+  "type": "melee",
+  "multiplier": 0.9,
+  "range": 4,
+  "interval": 8
+ },
+ "skill": {
+  "type": "aoe",
+  "multiplier": 2.0,
+  "range": 5,
+  "radius": 3,
+  "cooldown": 200,
+  "energy_gain": 8
+ },
+ "burst": {
+  "type": "aoe",
+  "multiplier": 4.0,
+  "range": 0,
+  "radius": 6,
+  "cooldown": 400,
+  "energy_cost": 70
+ }
+}

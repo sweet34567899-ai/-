@@ -1,0 +1,19 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "misc",
+ "ingredients": [
+  {
+   "item": "minecraft:nether_star"
+  },
+  {
+   "item": "minecraft:diamond_block"
+  },
+  {
+   "item": "minecraft:phantom_membrane"
+  }
+ ],
+ "result": {
+  "item": "elementalgaze:archon_trace_anemo",
+  "count": 1
+ }
+}
