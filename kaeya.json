@@ -1,0 +1,34 @@
+{
+ "element": "cryo",
+ "rarity": 4,
+ "archon": false,
+ "in_roll_pool": true,
+ "normal": {
+  "type": "melee",
+  "multiplier": 0.9,
+  "range": 4,
+  "interval": 8
+ },
+ "skill": {
+  "type": "cone",
+  "progressive": true,
+  "multiplier": 1.9,
+  "range": 9,
+  "cone": 0.6,
+  "waves": 4,
+  "tick": 2,
+  "cooldown": 200,
+  "energy_gain": 10
+ },
+ "burst": {
+  "type": "orbit",
+  "multiplier": 0.9,
+  "radius": 3.0,
+  "arms": 4,
+  "duration": 160,
+  "tick": 4,
+  "interval": 12,
+  "cooldown": 500,
+  "energy_cost": 70
+ }
+}

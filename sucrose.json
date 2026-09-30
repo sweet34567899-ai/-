@@ -1,0 +1,36 @@
+{
+ "element": "anemo",
+ "rarity": 4,
+ "archon": false,
+ "in_roll_pool": true,
+ "normal": {
+  "type": "ranged",
+  "multiplier": 0.8,
+  "range": 16,
+  "interval": 10
+ },
+ "skill": {
+  "type": "field",
+  "style": "vortex",
+  "multiplier": 1.2,
+  "range": 10,
+  "radius": 5,
+  "duration": 20,
+  "tick": 10,
+  "pull": 0.9,
+  "cooldown": 200,
+  "energy_gain": 10
+ },
+ "burst": {
+  "type": "field",
+  "style": "vortex",
+  "multiplier": 0.9,
+  "range": 8,
+  "radius": 7,
+  "duration": 120,
+  "tick": 10,
+  "pull": 0.7,
+  "cooldown": 500,
+  "energy_cost": 70
+ }
+}

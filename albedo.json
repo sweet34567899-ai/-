@@ -1,0 +1,28 @@
+{
+ "element": "geo",
+ "rarity": 5,
+ "archon": false,
+ "in_roll_pool": true,
+ "normal": {
+  "type": "melee",
+  "multiplier": 1.1,
+  "range": 4,
+  "interval": 10
+ },
+ "skill": {
+  "type": "aoe",
+  "multiplier": 2.3,
+  "range": 6,
+  "radius": 4,
+  "cooldown": 200,
+  "energy_gain": 8
+ },
+ "burst": {
+  "type": "aoe",
+  "multiplier": 6.5,
+  "range": 0,
+  "radius": 7,
+  "cooldown": 600,
+  "energy_cost": 80
+ }
+}

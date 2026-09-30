@@ -1,0 +1,28 @@
+{
+ "element": "hydro",
+ "rarity": 5,
+ "archon": false,
+ "in_roll_pool": true,
+ "normal": {
+  "type": "ranged",
+  "multiplier": 1.0,
+  "range": 20,
+  "interval": 12
+ },
+ "skill": {
+  "type": "dash",
+  "multiplier": 2.0,
+  "range": 8,
+  "radius": 3,
+  "cooldown": 160,
+  "energy_gain": 8
+ },
+ "burst": {
+  "type": "aoe",
+  "multiplier": 6.0,
+  "range": 0,
+  "radius": 7,
+  "cooldown": 600,
+  "energy_cost": 80
+ }
+}

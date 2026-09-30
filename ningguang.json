@@ -1,0 +1,33 @@
+{
+ "element": "geo",
+ "rarity": 4,
+ "archon": false,
+ "in_roll_pool": true,
+ "normal": {
+  "type": "ranged",
+  "multiplier": 0.9,
+  "range": 16,
+  "interval": 12
+ },
+ "skill": {
+  "type": "barrier",
+  "multiplier": 1.5,
+  "aoe": 3.5,
+  "duration": 240,
+  "tick": 10,
+  "cooldown": 320,
+  "energy_gain": 10
+ },
+ "burst": {
+  "type": "strikes",
+  "style": "random",
+  "multiplier": 1.3,
+  "radius": 12,
+  "follow": true,
+  "waves": 8,
+  "tick": 5,
+  "aoe": 2.6,
+  "cooldown": 550,
+  "energy_cost": 70
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "element": "pyro",
+ "rarity": 4,
+ "archon": false,
+ "in_roll_pool": true,
+ "normal": {
+  "type": "melee",
+  "multiplier": 0.9,
+  "range": 4,
+  "interval": 8
+ },
+ "skill": {
+  "type": "cone",
+  "multiplier": 0.9,
+  "range": 8,
+  "cone": 0.55,
+  "waves": 4,
+  "tick": 5,
+  "cooldown": 220,
+  "energy_gain": 10
+ },
+ "burst": {
+  "type": "orbit",
+  "multiplier": 0.8,
+  "radius": 3.2,
+  "arms": 3,
+  "duration": 160,
+  "tick": 4,
+  "interval": 12,
+  "cooldown": 500,
+  "energy_cost": 70
+ }
+}

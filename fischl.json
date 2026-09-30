@@ -1,0 +1,34 @@
+{
+ "element": "electro",
+ "rarity": 4,
+ "archon": false,
+ "in_roll_pool": true,
+ "normal": {
+  "type": "ranged",
+  "multiplier": 0.8,
+  "range": 18,
+  "interval": 10
+ },
+ "skill": {
+  "type": "summon",
+  "multiplier": 0.9,
+  "range": 12,
+  "duration": 200,
+  "tick": 5,
+  "interval": 20,
+  "cooldown": 250,
+  "energy_gain": 10
+ },
+ "burst": {
+  "type": "strikes",
+  "style": "random",
+  "multiplier": 1.6,
+  "radius": 11,
+  "follow": true,
+  "waves": 6,
+  "tick": 6,
+  "aoe": 2.8,
+  "cooldown": 500,
+  "energy_cost": 70
+ }
+}

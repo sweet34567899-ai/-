@@ -1,0 +1,23 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="elementalgaze"
+version="0.1.0"
+displayName="Elemental Gaze"
+description='''Activity-driven Vision (Gaze) system with character-bound elemental kits. Prototype.'''
+
+[[dependencies.elementalgaze]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.elementalgaze]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"

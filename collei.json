@@ -1,0 +1,32 @@
+{
+ "element": "dendro",
+ "rarity": 4,
+ "archon": false,
+ "in_roll_pool": true,
+ "normal": {
+  "type": "ranged",
+  "multiplier": 0.8,
+  "range": 18,
+  "interval": 10
+ },
+ "skill": {
+  "type": "boomerang",
+  "multiplier": 1.2,
+  "range": 14,
+  "radius": 1.8,
+  "cooldown": 200,
+  "energy_gain": 10
+ },
+ "burst": {
+  "type": "delayed_burst",
+  "multiplier": 4.0,
+  "range": 14,
+  "radius": 6,
+  "aoe": 4,
+  "delay": 30,
+  "duration": 40,
+  "tick": 10,
+  "cooldown": 500,
+  "energy_cost": 70
+ }
+}
