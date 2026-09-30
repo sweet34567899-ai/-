@@ -4,7 +4,7 @@ license="MIT"
 
 [[mods]]
 modId="elementalgaze"
-version="0.1.0"
+version="0.2.0"
 displayName="Elemental Gaze"
 description='''Activity-driven Vision (Gaze) system with character-bound elemental kits. Prototype.'''
 

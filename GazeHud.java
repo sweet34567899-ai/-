@@ -3,15 +3,19 @@ package com.example.elementalgaze.client;
 import com.example.elementalgaze.ClientKit;
 import com.example.elementalgaze.Element;
 import com.example.elementalgaze.GazeCharacter;
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.example.elementalgaze.ElementalGaze;
 import java.util.Locale;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.gui.overlay.ForgeGui;
 
 /** 상단 경험치 바 + 우측 하단 캐릭터 카드(스킬 칸 3개). 값이 바뀔 때만 서버가 동기화하므로 렌더에서는 계산만 한다. */
 public final class GazeHud {
+    private static final ResourceLocation XP_TEX = new ResourceLocation(ElementalGaze.MODID, "textures/gui/xp_corner.png");
     private static final int PANEL = 0xC0101018;
     private static final int MUTED = 0xFF8A8FA8;
     private static final int GOLD = 0xFFFFD75E;
@@ -31,23 +35,26 @@ public final class GazeHud {
 
     // ---------------- 상단: 레벨 / 경험치 ----------------
     private static void topBar(GuiGraphics g, Font f, int w, int accent, long now) {
-        int bw = 180, bh = 5, x = (w - bw) / 2, y = 6;
+        // 디자인 이미지(별 배지 + 파란 바). 파란 바의 비어 있는 부분은 옅은 막을 덮어 표현한다.
+        int dw = 130, dh = 55, x = (w - dw) / 2, y = 2;
         float frac = ClientKit.xpNeed > 0 ? Math.min(1f, ClientKit.xp / ClientKit.xpNeed) : 0f;
-        int fw = (int) (bw * frac);
-        g.fill(x - 1, y - 1, x + bw + 1, y + bh + 1, 0xB0000000);
-        g.fill(x, y, x + bw, y + bh, 0xFF1B1D28);
-        if (fw > 0) {
-            g.fill(x, y, x + fw, y + bh, accent);
-            g.fill(x, y, x + fw, y + 1, 0x66FFFFFF);
-        }
-        String lv = "Lv." + ClientKit.level;
-        g.drawString(f, lv, x - f.width(lv) - 6, y - 1, 0xFFFFFFFF, true);
+        RenderSystem.enableBlend();
+        RenderSystem.defaultBlendFunc();
+        g.blit(XP_TEX, x, y, dw, dh, 0, 0, 320, 135, 320, 135);
+        int ix0 = x + (int) (dw * 0.268f), ix1 = x + (int) (dw * 0.818f);
+        int iy0 = y + (int) (dh * 0.234f), iy1 = y + (int) (dh * 0.567f);
+        int filled = ix0 + (int) ((ix1 - ix0) * frac);
+        if (filled < ix1) g.fill(filled, iy0, ix1, iy1, 0xD0F1EBFA);
+        // 별 위에 레벨 숫자
+        String lv = String.valueOf(ClientKit.level);
+        g.drawCenteredString(f, lv, x + (int) (dw * 0.17f), y + (int) (dh * 0.36f) - 4, 0xFFFFFFFF);
+        // 경험치 수치는 바 아래에 작게
         String xp = (int) ClientKit.xp + " / " + (int) ClientKit.xpNeed;
-        g.drawString(f, xp, x + bw + 6, y - 1, 0xFFB8BDD1, true);
+        small(g, f, xp, x + (int) (dw * 0.545f), y + (int) (dh * 0.60f), 0xFFB8BDD1);
         if (ClientKit.points > 0) {
             int a = 170 + (int) (Math.sin(now * 0.3) * 70);
             String s = "★ " + ClientKit.points + "  [" + Keys.MENU.getTranslatedKeyMessage().getString() + "]";
-            g.drawCenteredString(f, s, w / 2, y + bh + 4, (a << 24) | 0xFFD75E);
+            g.drawCenteredString(f, s, w / 2, y + dh + 1, (a << 24) | 0xFFD75E);
         }
     }
 
